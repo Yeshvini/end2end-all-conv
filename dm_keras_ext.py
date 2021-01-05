@@ -631,8 +631,8 @@ class DMAucModelCheckpoint(Callback):
             self.best_epoch = epoch + 1
             self.best_auc = epoch_auc
             self.best_all_auc = auc
-            if self.filepath != "NOSAVE":
-                self.model.save(self.filepath)
+            #if self.filepath != "NOSAVE":
+             #   self.model.save(self.filepath)
 
     def on_train_end(self, logs={}):
         if self.best_auc >= 0.:
